@@ -4,7 +4,7 @@ const apiOptions = {
   server: 'http://localhost:3000'
 };
 if(process.env.NODE_ENV === 'production'){
-  apiOptions.server  = 'https://loc8r-api-6mah.onrender.com';
+  apiOptions.server  = 'https://loc8r-24-api.onrender.com';
 }
 
 const homelist = (req, res) => {
