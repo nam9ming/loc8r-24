@@ -8,11 +8,12 @@ const locationsListByDistance = async (req, res) => {
     type: "Point",
     coordinates: [lng, lat]
   };
+  const maxDistance = parseInt(req.query.maxDistance, 10) || 200000;
   const geoOptions = {
     distanceField: "distance.calculated",
     key: 'coords',
     spherical: true,
-    maxDistance: 200000,
+    maxDistance,
   };
   if (!lng || !lat) {
     return res
